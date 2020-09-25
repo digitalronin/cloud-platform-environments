@@ -4,7 +4,7 @@ on:
 
 name: Conftest YAML files
 jobs:
-  format-code:
+  conftest-yaml:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
