@@ -10,4 +10,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: digitalronin/github-actions/conftest-yaml@master
         env:
+          POLICY_DIR: "rego_policies"
+          CONFTEST_OPTIONS: "--no-color"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
