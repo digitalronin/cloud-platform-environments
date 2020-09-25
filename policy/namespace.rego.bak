@@ -1,0 +1,19 @@
+package main
+
+name = input.metadata.name
+
+required_namespace_annotations {
+  input.metadata.annotations["cloud-platform.justice.gov.uk/slack-channel"]
+  input.metadata.annotations["cloud-platform.justice.gov.uk/slack-channel"]
+  input.metadata.annotations["cloud-platform.justice.gov.uk/business-unit"]
+  input.metadata.annotations["cloud-platform.justice.gov.uk/application"]
+  input.metadata.annotations["cloud-platform.justice.gov.uk/owner"]
+  input.metadata.annotations["cloud-platform.justice.gov.uk/source-code"]
+  input.metadata.annotations["cloud-platform.justice.gov.uk/slack-channel"]
+}
+
+deny[msg] {
+  input.kind == "Namespace"
+  not required_namespace_annotations
+  msg = sprintf("%s is missing one or more required annotations", [name])
+}
