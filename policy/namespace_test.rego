@@ -3,7 +3,7 @@ package main
 # Annotations
 
 test_deny_empty_business_unit {
-  msg := "Namespace must have business-unit annotation"
+  msg := "Namespace must have business-unit annotationx"
 
   empty_business_unit_annotation := {
     "kind": "Namespace",
