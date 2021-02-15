@@ -6,7 +6,6 @@ metadata:
 subjects:
   - kind: Group
     name: "github:sentencing-and-oasys-development-team"
-    apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole
   name: admin
